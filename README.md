@@ -31,19 +31,26 @@ To Illustrates how to perform time series analysis and decomposition on the mont
 
 
 ### OUTPUT:
-FIRST FIVE ROWS:
 
 
 
-PLOTTING THE DATA:
 
-SEASONAL PLOT REPRESENTATION :
+## PLOTTING THE DATA:
+<img width="1035" height="291" alt="image" src="https://github.com/user-attachments/assets/2e5ccd1d-e4fd-49da-bcf7-1bd76808e060" />
+
+
+## SEASONAL PLOT REPRESENTATION :
+<img width="1012" height="299" alt="image" src="https://github.com/user-attachments/assets/19fd41cb-2099-4181-8fc3-f8268a010bee" />
 
 
 
-TREND PLOT REPRESENTATION :
 
-OVERAL REPRESENTATION:
+## TREND PLOT REPRESENTATION :
+<img width="1023" height="306" alt="image" src="https://github.com/user-attachments/assets/eaf717dd-4f8c-4e83-be21-cf106501270e" />
+
+
+## OVERAL REPRESENTATION:
+<img width="1093" height="294" alt="image" src="https://github.com/user-attachments/assets/89ee1bce-b38d-4ee7-807e-6b45628eba6c" />
 
 
 
