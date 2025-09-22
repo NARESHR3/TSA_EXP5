@@ -14,7 +14,49 @@ To Illustrates how to perform time series analysis and decomposition on the mont
 
 ### PROGRAM:
 
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from statsmodels.tsa.seasonal import seasonal_decompose
 
+# Step 1: Load dataset, convert 'Date' column to datetime, set a
+data = pd.read_csv("tsa.csv", parse_dates=['Date'], index_col='Date')
+
+# Step 2: Perform seasonal decomposition on 'Close' prices
+# Using period=30 (approx monthly seasonality for daily stock data)
+decomposition = seasonal_decompose(data['Close'], model='additive', period=30)
+
+# Step 3: Plot the decomposition
+plt.figure(figsize=(10, 12))
+
+# Original Data
+plt.subplot(411)
+plt.plot(data['Close'], label='Close')
+plt.legend(loc='upper left')
+plt.title('Closing Prices')
+
+# Trend Plot
+plt.subplot(412)
+plt.plot(decomposition.trend, label='Trend', color='orange')
+plt.legend(loc='upper left')
+plt.title('Trend')
+
+# Seasonal Plot
+plt.subplot(413)
+plt.plot(decomposition.seasonal, label='Seasonal', color='green')
+plt.legend(loc='upper left')
+plt.title('Seasonality')
+
+# Residual Plot
+plt.subplot(414)
+plt.plot(decomposition.resid, label='Residual', color='red')
+plt.legend(loc='upper left')
+plt.title('Residuals')
+
+plt.tight_layout()
+plt.show()
+```
 
 
 
